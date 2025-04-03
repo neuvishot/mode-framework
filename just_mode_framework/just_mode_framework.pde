@@ -4,15 +4,15 @@ int mode;
 final int starts = 1;
 final int game = 2;
 final int gameover = 3;
+final int pause = 4;
 
-void setup(){
-  size(600,600);
+void setup() {
+  size(600, 600);
   mode = starts;
-  
 }
 
-void draw(){
-    println(mouseX, mouseY);
+void draw() {
+  println(mouseX, mouseY);
   //println(decide, randomWord, randomColor);
   if (mode == starts) {
     starts();
@@ -20,6 +20,8 @@ void draw(){
     game();
   } else if (mode == gameover) {
     gameover();
+  } else if (mode == pause) {
+    pause();
   }
 }
 
@@ -30,5 +32,7 @@ void mousePressed() {
     gameClicks();
   } else if (mode == gameover) {
     gameoverClicks();
+  } else if (mode == pause){
+    pauseClicks();
   }
 }

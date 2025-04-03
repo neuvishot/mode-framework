@@ -3,7 +3,7 @@ void game(){
   
 }
 
-void gameCLicks(){
+void gameClicks(){
   
   
 }
